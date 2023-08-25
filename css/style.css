@@ -131,86 +131,81 @@ img{
 /* header */
 
 #hd{
-    background-color: rgb(40, 195, 40);
+    background-color: #67b1ee;
+}
+#hd>div{
+    height: 100%;
 }
 #hd h1{
     margin: auto 30px;
 }
+.gnb{
+    margin-right: 30px;
+}
 
-#gnb ul{
-    max-height: 0;
-    overflow: hidden;
-    transition: 0.5s;
-    z-index: 500;
-}
-#gnb:hover ul{
-    max-height: 9rem;
-}
-#gnb>li>a{
+.gnb>li>a{
+    background-color: rgb(255, 255, 255);
     font-size: 22px;
     font-weight: bold;
-    background-color: #e1fde1;
-    padding: 15px 20px;
+    width: 140px;
+    padding: 9px 0;
 }
-#gnb ul{
+.gnb ul{
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.5s;
     width: 100%;
-    background-color: #e1fde1;
+    background-color: rgb(236, 236, 236);
+    z-index: 300;
 }
-#gnb ul a{
-    padding: 12px 0;
-}
-
-#gnb > li:hover > a{
-    background-color: rgb(255, 255, 255);
+.gnb ul a{
+    padding: 9px 0;
 }
 
-#gnb ul a:hover{
-    background-color: rgb(40, 195, 40);
+
+.gnb:hover ul{
+    max-height: 180px;
+}
+.gnb>li:hover>a{
+    background-color: #2056ab;
+    color: white;
+}
+.gnb ul a:hover{
+    background-color: #606060;
     color: white;
     font-weight: bold;
 }
 
-#gnb::after{
-    content: "";
-    height: 0;
-    background-color: #e1fde1;
-    transition: 0.5s;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 400;
-}
-
-#gnb:hover::after{
-    height: 11rem;
-}
 
 
 /* slide */
 
-.slide{
-    width: 10000px;
+.slide>div{
+    opacity: 0;
+    transition: 1s;
+}
+.slide>div.act{
+    opacity: 1;
 }
 
 
 /* threediv */
 
-#threediv span{
-    padding: 5px 10px;
-    background-color: rgb(40, 195, 40);
+.notice-gallery span{
+    cursor: pointer;
+    padding: 5px 14px;
+    background-color: #9ed6fc;
     color: white;
-    font-size: 21px;
     font-weight: bold;
+    font-size: 20px;
 }
-
-#threediv ul{
-    height: 162px;
+.notice-gallery ul ul{
     width: 100%;
+    height: 163px;
 }
-.notice ul a, .notice ul p{
-    line-height: 40.5px;
-    padding: 0 10px;
+.notice ul a,.notice ul p{
+    line-height: 40.75px;
+    padding: 0 5px;
 }
 .notice ul>li:nth-child(odd){
     background-color: #efefef;
@@ -218,21 +213,33 @@ img{
 .notice ul>li:nth-child(even){
     background-color: #d7d7d7;
 }
+#threediv .on span{
+    background-color: #2056ab;
+}
+.gallery ul{
+    background-color: #efefef;
+    left: 0;
+}
+
+#threediv .on{
+    z-index: 100;
+}
+
+
 
 /* footer */
 
 #ft{
-    background-color: rgb(40, 195, 40);
+    background-color: #c9c9c9;
 }
-
 #ft h2{
-    margin-left: 30px;
+    margin: auto 30px;
 }
-#ft h3{
-    color: #333333;
+#ft h3, #ft a{
+    color: white;
 }
-.Fsite{
-    margin-right: 20px;
+#ft>div{
+    margin-right: 30px;
 }
 
 

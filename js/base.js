@@ -1,11 +1,16 @@
 $(document).ready(function(){
+
+    let count = 0;
     setInterval(function(){
-        $(".slide").animate({marginLeft : -1200},400, function(){
-            $(this).find("div").eq(0).appendTo($(this))
-            $(this).css("margin-left",0)
-        })        
+        count++
+        count %= 3
+        $(".slide>div").eq(count).addClass("act").siblings().removeClass("act")
     },3000)
 
+    $(".notice-gallery li > span").click(function(){
+        $(this).parent().addClass("on").siblings().removeClass('on')        
+    })
+   
     $(".notice li").eq(0).click(function(){
         $("#popup").removeClass("d-none")
     })
