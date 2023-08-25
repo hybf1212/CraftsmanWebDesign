@@ -6,6 +6,10 @@ $(document).ready(function(){
         })
     },3000)
 
+    $(".notice-gallery li > span").click(function(){
+        $(this).parent().addClass("on").siblings().removeClass('on')        
+    })
+   
     $(".notice li").eq(0).click(function(){
         $("#popup").removeClass("d-none")
     })
